@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: sve-api
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: America/Sao_Paulo
+  jpa:
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format-sql: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    #Local Config
+    url: jdbc:postgresql://localhost:5432/sve
+    username: postgres
+    password: postgres
+
+
+server:
+  servlet:
+    context-path: /
+  port: 8080
+
+   
+logging:
+  level:
+    root: INFO
+
